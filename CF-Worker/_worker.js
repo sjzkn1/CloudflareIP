@@ -24,24 +24,22 @@ export default {
         const 请求路径 = 请求URL.pathname;
 
         // 定义节点信息显示路径
-        const 节点路径 = '/sub';
+        const 节点路径 = '/zibo';
 
         if (请求路径 === 节点路径) {
             return new Response(`部署成功！
 
-   你的UUID: ${我的VL密钥}
-   你的部署域名：${部署域名}
+   你的UUID: ${fb8bd75b-dde7-4c64-8fe8-ac2ed21dbe8f}
+   你的部署域名：${shoudong.github1.de5.net}
    你的反代ip：${反代IP}
 
 默认节点：
 vless://${我的VL密钥}@${部署域名}:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#${部署域名}
 vless://${我的VL密钥}@108.162.192.0:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#sg 新加坡 SG
 vless://${我的VL密钥}@108.162.198.0:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#jp 日本 JP
-vless://${我的VL密钥}@104.18.0.0:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#us 美国 US
-vless://${我的VL密钥}@104.26.0.0:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#de 德国 DE
 vless://${我的VL密钥}@188.114.96.0:443?encryption=none&security=tls&sni=${部署域名}&fp=random&type=ws&host=${部署域名}&path=pyip%3D${反代IP}#nl 荷兰 NL
 
-更多节点使用手搓节点生成器： http://ip.cloudip.ggff.net`, { status: 200, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+更多节点使用手搓节点生成器： http://shoudong.github1.de5.net`, { status: 200, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
         } else {
             // 其他路径返回404响应
             return new Response('部署成功，使用你的路径查看节点信息！', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
